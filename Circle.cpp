@@ -4,8 +4,8 @@
  * EECS 183, Fall 2017
  * Project 4: CoolPics
  *
- * <#Name(s)#>
- * <#uniqname(s)#>
+ * matthew Waldeck, annmarie zheng
+ * mwaldeck, annzheng
  *
  * <#Description#>
  */
