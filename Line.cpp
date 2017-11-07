@@ -68,7 +68,86 @@ Color Line::getColor(){
 }
 
 void read(isstream& ins){
-    ins >> 
+    /* read in format for line is as follows
+     * (0,0) (0,0) blueNum greenNum redNum
+     */
+    
+    int xStart;
+    int yStart;
+    
+    int xEnd;
+    int yEnd;
+    
+    int blue;
+    int green;
+    int red;
+    
+    ins >> xStart;
+    while (ins.fail()){
+        ins.clear();
+        ins.ignore(1);
+        ins >> xStart;
+    }
+    
+    ins >> yStart;
+    while (ins.fail()){
+        ins.clear();
+        ins.ignore(1);
+        ins >> yStart;
+    }
+    
+    ins >> xEnd;
+    while (ins.fail()){
+        ins.clear();
+        ins.ignore(1);
+        ins >> xEnd;
+    }
+    
+    ins >> yEnd;
+    while (ins.fail()){
+        ins.clear();
+        ins.ignore(1);
+        ins >> yEnd;
+    }
+    
+    ins >> blue;
+    while (ins.fail()){
+        ins.clear();
+        ins.ignore(1);
+        ins >> blue;
+    }
+    
+    ins >> green;
+    while (ins.fail()){
+        ins.clear();
+        ins.ignore(1);
+        ins >> green;
+    }
+    
+    ins >> red;
+    while (ins.fail()){
+        ins.clear();
+        ins.ignore(1);
+        ins >> blue;
+    }
+    
+    start.setX(startX);
+    start.setY(startY);
+    end.setX(endX);
+    end.setY(endY);
+    lineColor.setBlue(blue);
+    lineColor.setGreen(green);
+    lineColor.setRed(red);
+}
+
+void Line::write(ostream& outs){
+    outs << "(" << start.getX() << "," << start.getY() <<")";
+    outs << "(" << end.getX() << "," << end.getY() <<")";
+    
+    //writing colors in BGR format
+    outs << lineColor.getBlue() << " ";
+    outs << lineColor.getGreen() << " ";
+    out << lineColor.getRed() << " ";
 }
 
 
