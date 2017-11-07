@@ -16,6 +16,63 @@
 // TODO: implement two Line constructors, setStart, getStart, setEnd,
 //       getEnd, setColor, getColor, read, write.
 
+Line::Line(){
+    
+}
+
+Line::Line(Point pt1, Point pt2, Color color){
+    //setting start coordinates to pt1
+    start.setX(pt1.getX());
+    start.setY(pt1.getY());
+    
+    //seetting end coordinates to pt2
+    end.setX(pt2.getX());
+    end.setY(pt2.getY());
+    
+    //setting color member to color argument
+    lineColor.setRed(getRed(color));
+    lineColor.setGreen(getGreen(color));
+    lineColor.setBlue(getBlue(color));
+}
+void Line::setStart(Point pt){
+    //setting start member coordinates to that of pt argument
+    start.setX(pt.getX());
+    start.setY(pt.getY());
+    return;
+}
+
+Point Line::getStart(){
+    return start;
+}
+
+void Line::setEnd(Point pt){
+    end.setX(pt.getX());
+    end.setY(pt.getY());
+    return;
+}
+
+Point Line::getEnd(){
+    return end;
+}
+
+void Line::setColor(Color color){
+    //setting RGB color scheme of lineColor to that of color arg
+    lineColor.setRed(color.getRed());
+    lineColor.setGreen(color.getGreen());
+    lineColor.setBlue(color.getBlue());
+    return;
+}
+
+Color Line::getColor(){
+    return lineColor;
+}
+
+void read(isstream& ins){
+    ins >> 
+}
+
+
+
 
 
 // Your code goes above this line.
