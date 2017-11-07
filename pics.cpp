@@ -4,10 +4,10 @@
  * EECS 183, Fall 2017
  * Project 4: CoolPics
  *
- * <#Name(s)#>
- * <#uniqname(s)#>
+ * matt waldeck, annmarie zheng
+ * mwaldeck, annzheng
  *
- * <#Description#>
+ * creates images for eecs183 project4
  */
 
 #include <iostream>

@@ -4,10 +4,10 @@
  * EECS 183, Fall 2017
  * Project 4: CoolPics
  *
- * <#Name(s)#>
- * <#uniqname(s)#>
+ * matt waldeck, annmarie zheng
+ * mwaldeck, annzheng
  *
- * <#Description#>
+ * creates line class file for eecs183 proejct 4
  */
 
 #include "Line.h"
