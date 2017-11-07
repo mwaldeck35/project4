@@ -72,7 +72,7 @@ void write(ostream& outs){
 
 
 
-Color::checkRange(int val){
+int Color::checkRange(int val){
     if (val < 0){
         return 0;
     }
