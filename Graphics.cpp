@@ -4,10 +4,10 @@
  * EECS 183, Fall 2017
  * Project 4: CoolPics
  *
- * <#Name(s)#>
- * <#uniqname(s)#>
+ * matt waldeck, annmarie zheng
+ * mwaldeck, annzheng
  *
- * <#Description#>
+ * graphics file for eecs183 project 4
  */
 
 #include <iostream>
@@ -23,7 +23,34 @@ using namespace std;
 
 // TODO: implement constructor, clear, setPixel, initArray.
 
+Graphics::Graphics(){
+    initArray();
+}
 
+void Graphics::clear(){
+    //resets all values to 0 by flattening the array
+    initArray();
+    return;
+}
+
+void Graphics::setPixel(int x, int y, Color color){
+    //conditional statement ensures valid pixel
+    if ((x >= 0 && x <= 255) && (y >= 0 && y <= 255)){
+        pixelData[x][y].setRed(color.getRed());
+        pixelData[x][y].setGreen(color.getGreen());
+        pixelData[x][y].setBlue(color.getBlue());
+    }
+    
+}
+
+void Graphics::initArray(){
+    for (int i = 0; i < DIMENSION * DIMENSION; i++){
+        pixelData[0][i].setRed = 0;
+        pixelData[0][i].setGreen = 0;
+        pixelData[0][i].setBlue = 0;
+    }
+    return;
+}
 
 // Your code goes above this line.
 // Don't change the implementation below!

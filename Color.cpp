@@ -17,7 +17,9 @@
 
 
 Color::Color(){
-    
+    red = 0;
+    green = 0;
+    blue = 0;
 }
 Color::Color(int redVal, int greenVal, int blueVal){
     
