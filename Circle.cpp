@@ -7,7 +7,7 @@
  * matthew Waldeck, annmarie zheng
  * mwaldeck, annzheng
  *
- * <#Description#>
+ * circle file for eecs 183 project 4
  */
 
 #include "Circle.h"
