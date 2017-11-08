@@ -62,6 +62,7 @@ void Point::read(istream& ins) {
         ins.ignore(1);
         ins >> y;
     }
+    ins.ignore(1);
 
     return;
 }    
