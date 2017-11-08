@@ -23,6 +23,164 @@ using namespace std;
 //       setColorBottomLeft, getColorBottomLeft, read, write.
 
 
+Rectangle::Rectangle(){
+    
+}
+
+Rectangle::Rectangle(Point pt1, Point pt2, Color color){
+    start.setX(pt1.getX());
+    start.setY(pt1.getY());
+    
+    end.setX(pt2.getX());
+    end.setY(pt2.getY());
+    
+    colorTopLeft.setRed(color.getRed());
+    colorTopLeft.setGreen(color.getGreen());
+    colorTopLeft.setBlue(color.getBlue());
+    
+    colorTopRight.setRed(color.getRed());
+    colorTopRight.setGreen(color.getGreen());
+    colorTopRight.setBlue(color.getBlue());
+    
+    colorBottomLeft.setRed(color.getRed());
+    colorBottomLeft.setGreen(color.getGreen());
+    colorBottomLeft.setBlue(color.getBlue());
+    
+    
+    colorBottomRight.setRed(color.getRed());
+    colorBottomRight.setGreen(color.getGreen());
+    colorBottomRight.setBlue(color.getBlue());
+    
+}
+
+Rectangle::Rectangle(Point pt1, Point pt2, Color cTopLeft, Color cTopRight, Color cBottomRight, Color cBottomLeft){
+    
+    start.setX(pt1.getX());
+    start.setY(pt1.getY());
+    
+    end.setX(pt2.getX());
+    end.setY(pt2.getY());
+    
+    colorTopLeft.setRed(cTopLeft.getRed());
+    colorTopLeft.setGreen(cTopLeft.getGreen());
+    colorTopLeft.setBlue(cTopLeft.getBlue());
+    
+    colorTopRight.setRed(cTopRight.getRed());
+    colorTopRight.setGreen(cTopRight.getGreen());
+    colorTopRight.setBlue(cTopRight.getBlue());
+    
+    colorBottomLeft.setRed(cBottomLeft.getRed());
+    colorBottomLeft.setGreen(cBottomLeft.getGreen());
+    colorBottomLeft.setBlue(cBottomLeft.getBlue());
+    
+    
+    colorBottomRight.setRed(cBottomRight.getRed());
+    colorBottomRight.setGreen(cBottomRight.getGreen());
+    colorBottomRight.setBlue(cBottomRight.getBlue());
+    
+}
+
+Rectangle::setStart(Point pt){
+    start.setX(pt.getX());
+    start.setY(pt.getY());
+}
+
+Point Rectangle::getStart(){
+    return start;
+}
+
+void Rectangle::setEnd(Point pt){
+    end.setX(pt.getX());
+    end.setY(pt.getY());
+}
+
+Point Rectangle::getEnd(){
+    return end;
+}
+
+void Rectangle::setColor(Color color){
+    
+    colorTopLeft.setRed(color.getRed());
+    colorTopLeft.setGreen(color.getGreen());
+    colorTopLeft.setBlue(color.getBlue());
+    
+    colorTopRight.setRed(color.getRed());
+    colorTopRight.setGreen(color.getGreen());
+    colorTopRight.setBlue(color.getBlue());
+    
+    colorBottomLeft.setRed(color.getRed());
+    colorBottomLeft.setGreen(color.getGreen());
+    colorBottomLeft.setBlue(color.getBlue());
+    
+    
+    colorBottomRight.setRed(color.getRed());
+    colorBottomRight.setGreen(color.getGreen());
+    colorBottomRight.setBlue(color.getBlue());
+    
+}
+
+void Rectangle::setColorTopLeft(Color color){
+    
+    colorTopLeft.setRed(color.getRed());
+    colorTopLeft.setGreen(color.getGreen());
+    colorTopLeft.setBlue(color.getBlue());
+    
+}
+
+Color Rectangle::getColorTopLeft(){
+    return colorTopLeft;
+}
+void Rectangle::setColorTopRight(Color color){
+
+    
+    colorTopRight.setRed(color.getRed());
+    colorTopRight.setGreen(color.getGreen());
+    colorTopRight.setBlue(color.getBlue());
+    
+    
+}
+
+Color Rectangle::getColorTopRight(){
+    return colorTopRight;
+}
+
+void Rectangle::setColorBottomRight(Color color){
+    
+    
+    colorBottomLeft.setRed(color.getRed());
+    colorBottomLeft.setGreen(color.getGreen());
+    colorBottomLeft.setBlue(color.getBlue());
+    
+    return;
+}
+Color Rectangle::getColorBottomRight(){
+    return colorBottomRight;
+}
+void Rectangle::setColorBottomLeft(Color color){
+    
+    colorBottomRight.setRed(color.getRed());
+    colorBottomRight.setGreen(color.getGreen());
+    colorBottomRight.setBlue(color.getBlue());
+    
+    return;
+}
+
+Color Rectangle::getColorBottomLeft(){
+    return colorBottomLeft;
+}
+
+void Rectangle::read(istream& ins){
+    
+    start.read(ins);
+    end.read(ins);
+    colorTopLeft.read(ins);
+    colorTopRight.read(ins);
+    colorBottomLeft.read(ins);
+    colorBttomRight.read(ins);
+    
+}
+
+
 
 // Your code goes above this line.
 // Don't change the implementations below!
