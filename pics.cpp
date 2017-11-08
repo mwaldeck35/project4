@@ -134,7 +134,8 @@ void writeFile(const Graphics& drawer)
     string fileName;
     cin >> fileName;
     fileName += ".bmp";
-    drawer.writeFile("test.txt");
+    drawer.writeFile("fileName");
+    cout << "[Wrote " << fileName << "]" << endl;
 }
 
 void loadFile(Graphics& drawer)
@@ -152,8 +153,8 @@ void loadFile(Graphics& drawer)
             current.read(inputFile);
             current.draw(drawer);
         }
-        else if (shape == 'C'){
-            Circle current;
+        else if (shape == 'T'){
+            Triangle current;
             current.read(inputFile);
             current.draw(drawer);
             
@@ -165,7 +166,14 @@ void loadFile(Graphics& drawer)
             
         }
         else if (shape == 'C'){
+            /*
+            Circle current;
+            current.read(inputFile);
+            current.draw(drawer);
+             */
             
+            string remainingLine;
+            getline(inputFile, remainingLine);
         }
         else {
             string remainingLine;
@@ -176,6 +184,7 @@ void loadFile(Graphics& drawer)
             
         }
     }
+    cout << "[Loaded " << fileName << "]" << endl;
     
     // TODO: implement
 }
