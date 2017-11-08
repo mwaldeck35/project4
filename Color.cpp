@@ -62,7 +62,7 @@ void Color::read(istream& ins){
     ins >> blue;
 }
 
-void write(ostream& outs){
+void Color::write(ostream& outs){
     //writing colors in RGB format
     outs << red << " ";
     outs << green << " ";
