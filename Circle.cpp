@@ -23,8 +23,62 @@ Circle::Circle(){
     
 }
 
-Circle Circle(Point pt, int r, Color c){
+Circle::Circle(Point pt, int r, Color c){
+    center.setX(pt.getX());
+    center.setY(pt.getY());
     
+    radius = r;
+    
+    color.setRed(c.getRed());
+    color.setBlue(c.getBlue());
+    color.setGreen(c.getGreen());
+    
+}
+
+void Circle::setCenter(Point pt){
+    center.setX(pt.getX());
+    center.setY(pt.getY());
+    return;
+    
+}
+
+Point Circle::getCenter(){
+    return center;
+}
+
+void Circle::setRadius(int r){
+    radius = r;
+    return;
+}
+
+int Circle::getRadius(){
+    return radius;
+}
+
+void Circle::setColor(Color c){
+    color.setRed(c.getRed());
+    color.setBlue(c.getBlue());
+    color.setGreen(c.getGreen());
+    return;
+}
+
+Color Circle::getColor(){
+    return color;
+}
+
+void Circle::read(istream& ins){
+    center.read(ins);
+    ins >> radius;
+    color.read(ins);
+    return;
+    
+}
+
+void Circle::write(ostream& outs){
+    center.write(outs);
+    outs << radius;
+    color.write(outs);
+    return;
 }
 
 

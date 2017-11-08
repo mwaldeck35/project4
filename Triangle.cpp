@@ -79,11 +79,13 @@ void Triangle::setColor(Color color){
     vertexOneColor = color;
     vertexTwoColor = color;
     vertexThreeColor = color;
+    return;
 }
 
 void Triangle::setVertexOne(Point pt){
     vertexOne.setX(pt.getX());
     vertexOne.setY(pt.getY());
+    return;
     
 }
 
@@ -95,6 +97,7 @@ void Triangle::setVertexOneColor(Color color){
     vertexOneColor.setRed(color.getRed());
     vertexOneColor.setBlue(color.getBlue());
     vertexOneColor.setGreen(color.getGreen());
+    return;
 }
 
 Color Triangle::getVertexOneColor(){
@@ -104,6 +107,7 @@ Color Triangle::getVertexOneColor(){
 void Triangle::setVertexTwo(Point pt){
     vertexTwo.setX(pt.getX());
     vertexTwo.setY(pt.getY());
+    return;
 }
 
 Point Triangle::getVertexTwo(){
@@ -114,6 +118,7 @@ void Triangle::setVertexTwoColor(Color color){
     vertexTwoColor.setRed(color.getRed());
     vertexTwoColor.setBlue(color.getBlue());
     vertexTwoColor.setGreen(color.getGreen());
+    return;
 }
 
 Color Triangle::getVertexTwoColor(){
@@ -123,6 +128,7 @@ Color Triangle::getVertexTwoColor(){
 void Triangle::setVertexThree(Point pt){
     vertexThree.setX(pt.getX());
     vertexThree.setY(pt.getY());
+    return;
 }
 
 Point Triangle::getVertexThree(){
@@ -133,6 +139,7 @@ void Triangle::setVertexThreeColor(Color color){
     vertexThreeColor.setRed(color.getRed());
     vertexThreeColor.setBlue(color.getBlue());
     vertexThreeColor.setGreen(color.getGreen());
+    return;
 }
 
 Color Triangle::getVertexThreeColor(){
@@ -147,6 +154,7 @@ void Triangle::read(istream& ins){
     vertexOneColor.read(ins);
     vertexTwoColor.read(ins);
     vertexThreeColor.read(ins);
+    return;
     
 }
 
@@ -158,6 +166,7 @@ void Triangle::write(ostream& outs){
     vertexOneColor.write(outs);
     vertexTwoColor.write(outs);
     vertexThreeColor.write(outs);
+    return;
 }
 
 
