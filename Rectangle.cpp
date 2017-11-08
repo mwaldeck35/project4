@@ -176,8 +176,17 @@ void Rectangle::read(istream& ins){
     colorTopLeft.read(ins);
     colorTopRight.read(ins);
     colorBottomLeft.read(ins);
-    colorBttomRight.read(ins);
+    colorBottomRight.read(ins);
     
+}
+
+void Rectangleangle::write(ostream& outs){
+    start.write(outs);
+    end.write(outs);
+    colorTopLeft.write(outs);
+    colorTopRight.write(outs);
+    colorBottomRight.write(outs);
+    colorBottomLeft.write(outs);
 }
 
 
