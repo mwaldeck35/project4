@@ -80,7 +80,7 @@ Rectangle::Rectangle(Point pt1, Point pt2, Color cTopLeft, Color cTopRight, Colo
     
 }
 
-Rectangle::setStart(Point pt){
+void Rectangle::setStart(Point pt){
     start.setX(pt.getX());
     start.setY(pt.getY());
 }
