@@ -131,16 +131,28 @@ void writeFile(const Graphics& drawer)
 {
     // TODO: implement
     // This will make use of Graphics::writeFile()
+    string fileName;
+    cin >> fileName;
+    fileName += ".bmp";
+    drawer.writeFile("test.txt");
 }
 
 void loadFile(Graphics& drawer)
 {
+    string fileName;
+    cin >> fileName;
+    
+    
     // TODO: implement
 }
 
 string tolower(string str)
 {
-    // TODO: implement
+    
+    for (int i = 0; i < str.length(); i++){
+        str.at(i) = tolower(str.at(i));
+    }
+    
 
     return str;
 }
