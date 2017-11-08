@@ -67,7 +67,7 @@ Color Line::getColor(){
     return lineColor;
 }
 
-void read(istream& ins){
+void Line::read(istream& ins){
     /* read in format for line is as follows
      * (0,0) (0,0) redNum greenNum blueNum
      */
@@ -76,10 +76,6 @@ void read(istream& ins){
     end.read(ins);
     lineColor.read(ins);
     
-    start.setX(startX);
-    start.setY(startY);
-    end.setX(endX);
-    end.setY(endY);
     
 }
 

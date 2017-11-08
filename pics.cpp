@@ -141,7 +141,15 @@ void loadFile(Graphics& drawer)
 {
     string fileName;
     cin >> fileName;
+    ifstream inputFile;
+    inputFile.open(fileName);
     
+    string currentLine;
+    while(getline(inputFile, currentLine)){
+        if (currentLine.at(0) == 'L'){
+            
+        }
+    }
     
     // TODO: implement
 }
