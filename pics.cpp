@@ -141,9 +141,8 @@ void writeFile(const Graphics& drawer)
 void loadFile(Graphics& drawer)
 {
     string fileName;
-    cin >> fileName;
     ifstream inputFile;
-    inputFile.open(fileName);
+    fileName = openFile(inputFile);
     
     char shape;
     while(inputFile >> shape){
