@@ -134,7 +134,7 @@ void writeFile(const Graphics& drawer)
     string fileName;
     cin >> fileName;
     fileName += ".bmp";
-    drawer.writeFile("fileName");
+    drawer.writeFile(fileName);
     cout << "[Wrote " << fileName << "]" << endl;
 }
 
