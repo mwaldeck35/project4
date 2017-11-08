@@ -67,7 +67,7 @@ Color Line::getColor(){
     return lineColor;
 }
 
-void read(isstream& ins){
+void read(istream& ins){
     /* read in format for line is as follows
      * (0,0) (0,0) redNum greenNum blueNum
      */

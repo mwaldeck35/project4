@@ -4,10 +4,10 @@
  * EECS 183, Fall 2017
  * Project 4: CoolPics
  *
- * <#Name(s)#>
- * <#uniqname(s)#>
+ * Ann-Marie Zheng, Matt Waldeck
+ * annzheng, mwaldeck
  *
- * <#Description#>
+ * ECCS 183 Triangle Class Implementations
  */
 
 #include "Triangle.h"
@@ -22,8 +22,39 @@ using namespace std;
 //       getVertexTwoColor, setVertexThreeColor, getVertexThreeColor,
 //       read, write.
 
+Triangle::Triangle(){
+    
+}
 
+Triangle::Triangle(Point pt1, Point pt2, Point pt3, Color color){
+    vertexOne = pt1;
+    vertexTwo = pt2;
+    vertexThree = pt3;
+    vertexOneColor = color;
+    vertexTwoColor = color;
+    vertexThreeColor = color;
+}
 
+Triangle::Triangle(Point pt1, Color color1,
+                   Point pt2, Color color2,
+                   Point pt3, Color color3){
+    vertexOne = pt1;
+    vertexTwo = pt2;
+    vertexThree = pt3;
+    vertexOneColor = color1;
+    vertexTwoColor = color2;
+    vertexThreeColor = color3;
+}
+
+void Triangle::setColor(Color color){
+    vertexOneColor = color;
+    vertexTwoColor = color;
+    vertexThreeColor = color;
+}
+
+void Triangle::setVertexOne(Point pt){
+    
+}
 // Your code goes above this line.
 // Don't change the implementations below!
 
