@@ -27,23 +27,52 @@ Triangle::Triangle(){
 }
 
 Triangle::Triangle(Point pt1, Point pt2, Point pt3, Color color){
-    vertexOne = pt1;
-    vertexTwo = pt2;
-    vertexThree = pt3;
-    vertexOneColor = color;
-    vertexTwoColor = color;
-    vertexThreeColor = color;
+    vertexOne.setX(pt1.getX());
+    vertexOne.setY(pt1.getY());
+    
+    vertexTwo.setX(pt2.getX());
+    vertexTwo.setY(pt2.getY());
+    
+    vertexThree.setX(pt3.getX());
+    vertexThree.setY(pt3.getY());
+    
+    vertexOneColor.setRed(color.getRed());
+    vertexOneColor.setBlue(color.getBlue());
+    vertexOneColor.setGreen(color.getGreen());
+    
+    vertexTwoColor.setRed(color.getRed());
+    vertexTwoColor.setBlue(color.getBlue());
+    vertexTwoColor.setGreen(color.getGreen());
+    
+    vertexThreeColor.setRed(color.getRed());
+    vertexThreeColor.setBlue(color.getBlue());
+    vertexThreeColor.setGreen(color.getGreen());
+
 }
 
 Triangle::Triangle(Point pt1, Color color1,
                    Point pt2, Color color2,
                    Point pt3, Color color3){
-    vertexOne = pt1;
-    vertexTwo = pt2;
-    vertexThree = pt3;
-    vertexOneColor = color1;
-    vertexTwoColor = color2;
-    vertexThreeColor = color3;
+    vertexOne.setX(pt1.getX());
+    vertexOne.setY(pt1.getY());
+    
+    vertexTwo.setX(pt2.getX());
+    vertexTwo.setY(pt2.getY());
+    
+    vertexThree.setX(pt3.getX());
+    vertexThree.setY(pt3.getY());
+    
+    vertexOneColor.setRed(color1.getRed());
+    vertexOneColor.setBlue(color1.getBlue());
+    vertexOneColor.setGreen(color1.getGreen());
+    
+    vertexTwoColor.setRed(color2.getRed());
+    vertexTwoColor.setBlue(color2.getBlue());
+    vertexTwoColor.setGreen(color2.getGreen());
+    
+    vertexThreeColor.setRed(color3.getRed());
+    vertexThreeColor.setBlue(color3.getBlue());
+    vertexThreeColor.setGreen(color3.getGreen());
 }
 
 void Triangle::setColor(Color color){

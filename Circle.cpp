@@ -19,7 +19,13 @@ using namespace std;
 
 // TODO: implement two constructors, setCenter, getCenter, setColor, getColor,
 //       setRadius, getRadius, read, write.
+Circle::Circle(){
+    
+}
 
+Circle Circle(Point pt, int r, Color c){
+    
+}
 
 
 // Your code goes above this line.
