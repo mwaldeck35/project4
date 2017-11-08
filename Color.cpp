@@ -34,7 +34,7 @@ void Color::setRed(int redVal){
     return;
 }
 
-int getRed(){
+int Color::getRed(){
     return red;
 }
 
@@ -43,7 +43,7 @@ void Color::setGreen(int greenVal){
     return;
 }
 
-int getGreen(){
+int Color::getGreen(){
     return green;
 }
 
@@ -52,8 +52,8 @@ void Color::setBlue(int blueVal){
     return;
 }
 
-int getBlue(){
-    return Blue;
+int Color::getBlue(){
+    return blue;
 }
 
 void Color::read(istream& ins){
