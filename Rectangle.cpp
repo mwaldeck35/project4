@@ -180,7 +180,7 @@ void Rectangle::read(istream& ins){
     
 }
 
-void Rectangleangle::write(ostream& outs){
+void Rectangle::write(ostream& outs){
     start.write(outs);
     end.write(outs);
     colorTopLeft.write(outs);
