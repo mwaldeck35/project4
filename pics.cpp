@@ -159,6 +159,7 @@ void loadFile(Graphics& drawer)
             
         }
         else if (shape == 'R'){
+            cout << "Hi" << endl;
             Rectangle current;
             current.read(inputFile);
             current.draw(drawer);
