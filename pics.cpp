@@ -172,6 +172,7 @@ void loadFile(Graphics& drawer)
             current.draw(drawer);
              */
             
+            //make sure to remove code below
             string remainingLine;
             getline(inputFile, remainingLine);
         }
