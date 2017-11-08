@@ -147,7 +147,7 @@ void loadFile(Graphics& drawer)
     string currentLine;
     while(getline(inputFile, currentLine)){
         if (currentLine.at(0) == 'L'){
-            Line line1(
+            
         }
     }
     
