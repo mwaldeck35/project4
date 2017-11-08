@@ -53,8 +53,78 @@ void Triangle::setColor(Color color){
 }
 
 void Triangle::setVertexOne(Point pt){
+    vertexOne.setX(pt.getX());
+    vertexOne.setY(pt.getY());
     
 }
+
+Point Triangle::getVertexOne(){
+    return vertexOne;
+}
+
+void Triangle::setVertexOneColor(Color color){
+    vertexOneColor.setRed(color.getRed());
+    vertexOneColor.setBlue(color.getBlue());
+    vertexOneColor.setGreen(color.getGreen());
+}
+
+Color Triangle::getVertexOneColor(){
+    return vertexOneColor;
+}
+
+void Triangle::setVertexTwo(Point pt){
+    vertexTwo.setX(pt.getX());
+    vertexTwo.setY(pt.getY());
+}
+
+Point Triangle::getVertexTwo(){
+    return vertexTwo;
+}
+
+void Triangle::setVertexTwoColor(Color color){
+    vertexTwoColor.setRed(color.getRed());
+    vertexTwoColor.setBlue(color.getBlue());
+    vertexTwoColor.setGreen(color.getGreen());
+}
+
+Color Triangle::getVertexTwoColor(){
+    return vertexTwoColor;
+}
+
+void Triangle::setVertexThree(Point pt){
+    vertexThree.setX(pt.getX());
+    vertexThree.setY(pt.getY());
+}
+
+Point Triangle::getVertexThree(){
+    return vertexThree;
+}
+
+void Triangle::setVertexThreeColor(Color color){
+    vertexThreeColor.setRed(color.getRed());
+    vertexThreeColor.setBlue(color.getBlue());
+    vertexThreeColor.setGreen(color.getGreen());
+}
+
+Color Triangle::getVertexThreeColor(){
+    return vertexThreeColor;
+}
+
+void Triangle::read(istream& ins){
+    vertexOne.read(ins);
+    vertexTwo.read(ins);
+    vertexThree.read(ins);
+    
+    
+    
+    vertexOneColor.read(ins);
+    vertexTwoColor.read(ins);
+    vertexThreeColor.read(ins);
+    
+    
+}
+
+
 // Your code goes above this line.
 // Don't change the implementations below!
 
