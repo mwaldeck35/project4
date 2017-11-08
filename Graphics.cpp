@@ -35,19 +35,19 @@ void Graphics::clear(){
 
 void Graphics::setPixel(int x, int y, Color color){
     //conditional statement ensures valid pixel
-    if ((x >= 0 && x <= 255) && (y >= 0 && y <= 255)){
+    
         pixelData[x][y].setRed(color.getRed());
         pixelData[x][y].setGreen(color.getGreen());
         pixelData[x][y].setBlue(color.getBlue());
-    }
+
     
 }
 
 void Graphics::initArray(){
     for (int i = 0; i < DIMENSION * DIMENSION; i++){
-        pixelData[0][i].setRed(0);
-        pixelData[0][i].setGreen(0);
-        pixelData[0][i].setBlue(0);
+        pixelData[0][i].setRed(255);
+        pixelData[0][i].setGreen(255);
+        pixelData[0][i].setBlue(255);
     }
     return;
 }

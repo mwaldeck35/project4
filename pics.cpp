@@ -140,9 +140,11 @@ void writeFile(const Graphics& drawer)
 
 void loadFile(Graphics& drawer)
 {
+    drawer.clear();
     string fileName;
     ifstream inputFile;
     fileName = openFile(inputFile);
+    
     
     char shape;
     while(inputFile >> shape){
@@ -185,6 +187,7 @@ void loadFile(Graphics& drawer)
             
         }
     }
+    inputFile.close();
     cout << "[Loaded " << fileName << "]" << endl;
     
     // TODO: implement
