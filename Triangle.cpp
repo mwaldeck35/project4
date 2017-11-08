@@ -115,13 +115,20 @@ void Triangle::read(istream& ins){
     vertexTwo.read(ins);
     vertexThree.read(ins);
     
-    
-    
     vertexOneColor.read(ins);
     vertexTwoColor.read(ins);
     vertexThreeColor.read(ins);
     
+}
+
+void Triangle::write(ostream& outs){
+    vertexOne.write(outs);
+    vertexTwo.write(outs);
+    vertexThree.write(outs);
     
+    vertexOneColor.write(outs);
+    vertexTwoColor.write(outs);
+    vertexThreeColor.write(outs);
 }
 
 
