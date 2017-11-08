@@ -30,9 +30,9 @@ Line::Line(Point pt1, Point pt2, Color color){
     end.setY(pt2.getY());
     
     //setting color member to color argument
-    lineColor.setRed(getRed(color));
-    lineColor.setGreen(getGreen(color));
-    lineColor.setBlue(getBlue(color));
+    lineColor.setRed(color.getRed());
+    lineColor.setGreen(color.getGreen());
+    lineColor.setBlue(color.getBlue());
 }
 void Line::setStart(Point pt){
     //setting start member coordinates to that of pt argument
@@ -67,7 +67,7 @@ Color Line::getColor(){
     return lineColor;
 }
 
-void read(isstream& ins){
+void read(istream& ins){
     /* read in format for line is as follows
      * (0,0) (0,0) redNum greenNum blueNum
      */
