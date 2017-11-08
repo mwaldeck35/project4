@@ -144,9 +144,35 @@ void loadFile(Graphics& drawer)
     ifstream inputFile;
     inputFile.open(fileName);
     
-    string currentLine;
-    while(getline(inputFile, currentLine)){
-        if (currentLine.at(0) == 'L'){
+    char shape;
+    while(inputFile >> shape){
+        
+        if (shape == 'L'){
+            Line current;
+            current.read(inputFile);
+            current.draw(drawer);
+        }
+        else if (shape == 'C'){
+            Circle current;
+            current.read(inputFile);
+            current.draw(drawer);
+            
+        }
+        else if (shape == 'R'){
+            Rectangle current;
+            current.read(inputFile);
+            current.draw(drawer);
+            
+        }
+        else if (shape == 'C'){
+            
+        }
+        else {
+            string remainingLine;
+            getline(inputFile, remainingLine);
+            
+            cout << "Error in input file: " << shape << " " << remainingLine
+            << endl;
             
         }
     }
