@@ -27,7 +27,7 @@ Circle::Circle(Point pt, int r, Color c){
     center.setX(pt.getX());
     center.setY(pt.getY());
     
-    radius = r;
+    radius = checkRadius(r);
     
     color.setRed(c.getRed());
     color.setBlue(c.getBlue());
