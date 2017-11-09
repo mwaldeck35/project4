@@ -214,6 +214,8 @@ void Rectangle::write(ostream& outs){
     colorTopRight.write(outs);
     colorBottomRight.write(outs);
     colorBottomLeft.write(outs);
+    
+    return;
 }
 
 
