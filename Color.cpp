@@ -57,9 +57,14 @@ int Color::getBlue(){
 }
 
 void Color::read(istream& ins){
+    
     ins >> red;
     ins >> green;
     ins >> blue;
+    if (ins.fail()){
+        ins.clear();
+        return;
+    }
 }
 
 void Color::write(ostream& outs){

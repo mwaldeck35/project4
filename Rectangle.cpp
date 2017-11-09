@@ -170,13 +170,33 @@ Color Rectangle::getColorBottomLeft(){
 }
 
 void Rectangle::read(istream& ins){
+ 
     
     start.read(ins);
     end.read(ins);
     colorTopLeft.read(ins);
+    
+    
+    
+    
     colorTopRight.read(ins);
     colorBottomLeft.read(ins);
     colorBottomRight.read(ins);
+    
+    if(ins.fail()){
+    
+    colorTopRight.setRed(colorTopLeft.getRed());
+    colorTopRight.setBlue(colorTopLeft.getBlue());
+    colorTopRight.setGreen(colorTopLeft.getGreen());
+    
+    colorBottomRight.setRed(colorTopLeft.getRed());
+    colorBottomRight.setBlue(colorTopLeft.getBlue());
+    colorBottomRight.setGreen(colorTopLeft.getGreen());
+    
+    colorBottomLeft.setRed(colorTopLeft.getRed());
+    colorBottomLeft.setBlue(colorTopLeft.getBlue());
+    colorBottomLeft.setGreen(colorTopLeft.getGreen());
+    }
     
 }
 
