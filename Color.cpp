@@ -12,19 +12,22 @@
 
 #include "Color.h"
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 9d8c970b77e528d284b39d77aae13bf52c9d54e0
 Color::Color(){
     red = 0;
     green = 0;
     blue = 0;
 }
+
 Color::Color(int redVal, int greenVal, int blueVal){
     
     red = checkRange(redVal);
     green = checkRange(greenVal);
     blue = checkRange(blueVal);
-    
 }
 
 void Color::setRed(int redVal){
@@ -63,6 +66,7 @@ void Color::read(istream& ins){
     red = checkRange(red);
     green = checkRange(green);
     blue = checkRange(blue);
+    return;
 }
 
 void Color::write(ostream& outs){
@@ -86,7 +90,10 @@ int Color::checkRange(int val){
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9d8c970b77e528d284b39d77aae13bf52c9d54e0
 istream& operator >> (istream& ins, Color& color)
 {
    color.read(ins);

@@ -19,21 +19,21 @@ Line::Line(){
 }
 
 Line::Line(Point pt1, Point pt2, Color color){
-    //setting start coordinates to pt1
+ 
     start.setX(pt1.getX());
     start.setY(pt1.getY());
-    
-    //seetting end coordinates to pt2
+
     end.setX(pt2.getX());
     end.setY(pt2.getY());
     
-    //setting color member to color argument
+ 
     lineColor.setRed(color.getRed());
     lineColor.setGreen(color.getGreen());
     lineColor.setBlue(color.getBlue());
 }
+
 void Line::setStart(Point pt){
-    //setting start member coordinates to that of pt argument
+
     start.setX(pt.getX());
     start.setY(pt.getY());
     return;
@@ -73,21 +73,23 @@ void Line::read(istream& ins){
     start.read(ins);
     end.read(ins);
     lineColor.read(ins);
-    
-    
+    return;
 }
 
 void Line::write(ostream& outs){
     start.write(outs);
     end.write(outs);
     lineColor.write(outs);
-    
+    return;
 }
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 9d8c970b77e528d284b39d77aae13bf52c9d54e0
 istream& operator >> (istream& ins, Line& line)
 {
     line.read(ins);

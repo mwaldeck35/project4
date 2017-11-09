@@ -144,6 +144,8 @@ Color Triangle::getVertexThreeColor(){
 void Triangle::read(istream& ins){
     vertexOne.read(ins);
     vertexOneColor.read(ins);
+    
+    //accounts for input form of pt col pt2 col2 pt3 col3
     if (!ins.fail()){
         vertexTwo.read(ins);
         vertexTwoColor.read(ins);
@@ -153,13 +155,12 @@ void Triangle::read(istream& ins){
     }
     ins.clear();
     vertexTwo.read(ins);
-    
-    
     vertexThree.read(ins);
     vertexOneColor.read(ins);
     vertexTwoColor.read(ins);
     vertexThreeColor.read(ins);
     
+    //sets all vertices to the same color if only one color is input
     if (ins.fail()){
         ins.clear();
         vertexTwoColor.setRed(vertexOneColor.getRed());
@@ -187,8 +188,11 @@ void Triangle::write(ostream& outs){
     return;
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 9d8c970b77e528d284b39d77aae13bf52c9d54e0
 istream& operator >> (istream& ins, Triangle& tri)
 {
     tri.read(ins);

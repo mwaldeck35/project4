@@ -21,8 +21,11 @@
 
 using namespace std;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 9d8c970b77e528d284b39d77aae13bf52c9d54e0
 Graphics::Graphics(){
     initArray();
 }
@@ -39,8 +42,6 @@ void Graphics::setPixel(int x, int y, Color color){
         pixelData[y][x].setRed(color.getRed());
         pixelData[y][x].setGreen(color.getGreen());
         pixelData[y][x].setBlue(color.getBlue());
-
-    
 }
 
 void Graphics::initArray(){

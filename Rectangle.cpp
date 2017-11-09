@@ -17,8 +17,6 @@
 #include <algorithm>
 using namespace std;
 
-
-
 Rectangle::Rectangle(){
     
 }
@@ -49,7 +47,8 @@ Rectangle::Rectangle(Point pt1, Point pt2, Color color){
     
 }
 
-Rectangle::Rectangle(Point pt1, Point pt2, Color cTopLeft, Color cTopRight, Color cBottomRight, Color cBottomLeft){
+Rectangle::Rectangle(Point pt1, Point pt2, Color cTopLeft, Color cTopRight,
+                     Color cBottomRight, Color cBottomLeft){
     
     start.setX(pt1.getX());
     start.setY(pt1.getY());
@@ -116,7 +115,6 @@ void Rectangle::setColor(Color color){
     colorBottomRight.setBlue(color.getBlue());
     
     return;
-    
 }
 
 void Rectangle::setColorTopLeft(Color color){
@@ -153,9 +151,11 @@ void Rectangle::setColorBottomRight(Color color){
     
     return;
 }
+
 Color Rectangle::getColorBottomRight(){
     return colorBottomRight;
 }
+
 void Rectangle::setColorBottomLeft(Color color){
     
     colorBottomLeft.setRed(color.getRed());
@@ -170,17 +170,14 @@ Color Rectangle::getColorBottomLeft(){
 }
 
 void Rectangle::read(istream& ins){
- 
-    
     start.read(ins);
     end.read(ins);
     colorTopLeft.read(ins);
     colorTopRight.read(ins);
     colorBottomRight.read(ins);
     colorBottomLeft.read(ins);
-    
-    
-    
+
+    //sets all vertices to the same color when there is only one color input
     if(ins.fail()){
         ins.clear();
         
@@ -196,7 +193,7 @@ void Rectangle::read(istream& ins){
         colorBottomLeft.setBlue(colorTopLeft.getBlue());
         colorBottomLeft.setGreen(colorTopLeft.getGreen());
     }
-    
+    return;
 }
 
 void Rectangle::write(ostream& outs){

@@ -129,7 +129,11 @@ int main()
 
 void writeFile(const Graphics& drawer)
 {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 9d8c970b77e528d284b39d77aae13bf52c9d54e0
     string fileName;
     cin >> fileName;
     fileName += ".bmp";
@@ -190,7 +194,10 @@ void loadFile(Graphics& drawer)
     inputFile.close();
     cout << "[Loaded " << fileName << "]" << endl;
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> 9d8c970b77e528d284b39d77aae13bf52c9d54e0
 }
 
 string tolower(string str)
@@ -205,7 +212,6 @@ string tolower(string str)
 }
 
 
-// Don't change the implementations below!
 
 void printMenu()
 {
