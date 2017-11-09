@@ -187,17 +187,17 @@ void Rectangle::read(istream& ins){
     
     if(ins.fail()){
         ins.clear();
-    colorTopRight.setRed(colorTopLeft.getRed());
-    colorTopRight.setBlue(colorTopLeft.getBlue());
-    colorTopRight.setGreen(colorTopLeft.getGreen());
+        colorTopRight.setRed(colorTopLeft.getRed());
+        colorTopRight.setBlue(colorTopLeft.getBlue());
+        colorTopRight.setGreen(colorTopLeft.getGreen());
     
-    colorBottomRight.setRed(colorTopLeft.getRed());
-    colorBottomRight.setBlue(colorTopLeft.getBlue());
-    colorBottomRight.setGreen(colorTopLeft.getGreen());
+        colorBottomRight.setRed(colorTopLeft.getRed());
+        colorBottomRight.setBlue(colorTopLeft.getBlue());
+        colorBottomRight.setGreen(colorTopLeft.getGreen());
     
-    colorBottomLeft.setRed(colorTopLeft.getRed());
-    colorBottomLeft.setBlue(colorTopLeft.getBlue());
-    colorBottomLeft.setGreen(colorTopLeft.getGreen());
+        colorBottomLeft.setRed(colorTopLeft.getRed());
+        colorBottomLeft.setBlue(colorTopLeft.getBlue());
+        colorBottomLeft.setGreen(colorTopLeft.getGreen());
     }
     
 }

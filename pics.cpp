@@ -183,6 +183,8 @@ void loadFile(Graphics& drawer)
             
             cout << "Error in input file: " << shape << " " << remainingLine
             << endl;
+            inputFile.close();
+            return;
             
         }
     }
