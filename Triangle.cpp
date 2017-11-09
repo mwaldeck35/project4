@@ -161,7 +161,6 @@ void Triangle::read(istream& ins){
     
     vertexThree.read(ins);
     vertexOneColor.read(ins);
-    
     vertexTwoColor.read(ins);
     vertexThreeColor.read(ins);
     
