@@ -13,29 +13,27 @@
 #include "Line.h"
 #include "Graphics.h"
 
-// TODO: implement two Line constructors, setStart, getStart, setEnd,
-//       getEnd, setColor, getColor, read, write.
 
 Line::Line(){
     
 }
 
 Line::Line(Point pt1, Point pt2, Color color){
-    //setting start coordinates to pt1
+ 
     start.setX(pt1.getX());
     start.setY(pt1.getY());
-    
-    //seetting end coordinates to pt2
+
     end.setX(pt2.getX());
     end.setY(pt2.getY());
     
-    //setting color member to color argument
+ 
     lineColor.setRed(color.getRed());
     lineColor.setGreen(color.getGreen());
     lineColor.setBlue(color.getBlue());
 }
+
 void Line::setStart(Point pt){
-    //setting start member coordinates to that of pt argument
+
     start.setX(pt.getX());
     start.setY(pt.getY());
     return;
@@ -75,23 +73,16 @@ void Line::read(istream& ins){
     start.read(ins);
     end.read(ins);
     lineColor.read(ins);
-    
-    
+    return;
 }
 
 void Line::write(ostream& outs){
     start.write(outs);
     end.write(outs);
     lineColor.write(outs);
-    
+    return;
 }
 
-
-
-
-
-// Your code goes above this line.
-// Don't change the implementations below!
 
 istream& operator >> (istream& ins, Line& line)
 {

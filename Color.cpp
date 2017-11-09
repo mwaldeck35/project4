@@ -12,21 +12,17 @@
 
 #include "Color.h"
 
-// TODO: implement first checkRange, then two constructors, setRed, getRed,
-//       setGreen, getGreen, setBlue, getBlue, read, write.
-
-
 Color::Color(){
     red = 0;
     green = 0;
     blue = 0;
 }
+
 Color::Color(int redVal, int greenVal, int blueVal){
     
     red = checkRange(redVal);
     green = checkRange(greenVal);
     blue = checkRange(blueVal);
-    
 }
 
 void Color::setRed(int redVal){
@@ -65,6 +61,7 @@ void Color::read(istream& ins){
     red = checkRange(red);
     green = checkRange(green);
     blue = checkRange(blue);
+    return;
 }
 
 void Color::write(ostream& outs){
@@ -87,9 +84,6 @@ int Color::checkRange(int val){
     return val;
 }
 
-
-// Your code goes above this line.
-// Don't change the implementations below!
 
 istream& operator >> (istream& ins, Color& color)
 {

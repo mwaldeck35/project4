@@ -16,11 +16,6 @@
 #include <cmath>
 using namespace std;
 
-// TODO: implement three constructors, setColor, setVertexOne, getVertexOne,
-//       setVertexTwo, getVertexTwo, setVertexThree, getVertexThree,
-//       setVertexOneColor, getVertexOneColor, setVertexTwoColor,
-//       getVertexTwoColor, setVertexThreeColor, getVertexThreeColor,
-//       read, write.
 
 Triangle::Triangle(){
     
@@ -149,6 +144,8 @@ Color Triangle::getVertexThreeColor(){
 void Triangle::read(istream& ins){
     vertexOne.read(ins);
     vertexOneColor.read(ins);
+    
+    //accounts for input form of pt col pt2 col2 pt3 col3
     if (!ins.fail()){
         vertexTwo.read(ins);
         vertexTwoColor.read(ins);
@@ -158,13 +155,12 @@ void Triangle::read(istream& ins){
     }
     ins.clear();
     vertexTwo.read(ins);
-    
-    
     vertexThree.read(ins);
     vertexOneColor.read(ins);
     vertexTwoColor.read(ins);
     vertexThreeColor.read(ins);
     
+    //sets all vertices to the same color if only one color is input
     if (ins.fail()){
         ins.clear();
         vertexTwoColor.setRed(vertexOneColor.getRed());
@@ -191,10 +187,6 @@ void Triangle::write(ostream& outs){
     vertexThreeColor.write(outs);
     return;
 }
-
-
-// Your code goes above this line.
-// Don't change the implementations below!
 
 istream& operator >> (istream& ins, Triangle& tri)
 {

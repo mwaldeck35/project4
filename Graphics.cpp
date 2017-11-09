@@ -21,8 +21,6 @@
 
 using namespace std;
 
-// TODO: implement constructor, clear, setPixel, initArray.
-
 Graphics::Graphics(){
     initArray();
 }
@@ -39,8 +37,6 @@ void Graphics::setPixel(int x, int y, Color color){
         pixelData[y][x].setRed(color.getRed());
         pixelData[y][x].setGreen(color.getGreen());
         pixelData[y][x].setBlue(color.getBlue());
-
-    
 }
 
 void Graphics::initArray(){
@@ -52,8 +48,6 @@ void Graphics::initArray(){
     return;
 }
 
-// Your code goes above this line.
-// Don't change the implementation below!
 
 void Graphics::writeFile(string fileName) const
 {

@@ -13,10 +13,8 @@
 
 #include "Point.h"
 
-// for the declaration of DIMENSION
 #include "utility.h"
 
-// TODO: implement two constructors, setX, getX, setY, getY, read, write, checkRange.
 Point::Point() {
     x = 0;
     y = 0;
@@ -44,13 +42,12 @@ void Point::setY(int yVal) {
 }
     
 int Point::getY() {
-    
     return checkRange(y);
 }
 
 void Point::read(istream& ins) {
-    
     ins >> x;
+    //loop makes sure that only the point numbers are read in
     while (ins.fail()){
         ins.clear();
         ins.ignore(1);

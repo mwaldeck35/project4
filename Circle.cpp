@@ -17,8 +17,7 @@
 #include <algorithm>
 using namespace std;
 
-// TODO: implement two constructors, setCenter, getCenter, setColor, getColor,
-//       setRadius, getRadius, read, write.
+
 Circle::Circle(){
     
 }
@@ -80,10 +79,6 @@ void Circle::write(ostream& outs){
     color.write(outs);
     return;
 }
-
-
-// Your code goes above this line.
-// Don't change the implementations below!
 
 istream& operator >> (istream& ins, Circle& circle)
 {
