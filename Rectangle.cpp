@@ -183,8 +183,10 @@ void Rectangle::read(istream& ins){
     colorBottomLeft.read(ins);
     colorBottomRight.read(ins);
     
-    if(ins.fail()){
     
+    
+    if(ins.fail()){
+        ins.clear();
     colorTopRight.setRed(colorTopLeft.getRed());
     colorTopRight.setBlue(colorTopLeft.getBlue());
     colorTopRight.setGreen(colorTopLeft.getGreen());

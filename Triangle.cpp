@@ -165,6 +165,7 @@ void Triangle::read(istream& ins){
     vertexThreeColor.read(ins);
     
     if (ins.fail()){
+        ins.clear();
         vertexTwoColor.setRed(vertexOneColor.getRed());
         vertexTwoColor.setBlue(vertexOneColor.getBlue());
         vertexTwoColor.setGreen(vertexOneColor.getGreen());
@@ -174,7 +175,7 @@ void Triangle::read(istream& ins){
         vertexThreeColor.setGreen(vertexOneColor.getGreen());
         
 }
-    
+   
     return;
     
 }
