@@ -45,9 +45,9 @@ void Graphics::setPixel(int x, int y, Color color){
 
 void Graphics::initArray(){
     for (int i = 0; i < DIMENSION * DIMENSION; i++){
-        pixelData[0][i].setRed(255);
-        pixelData[0][i].setGreen(255);
-        pixelData[0][i].setBlue(255);
+        pixelData[0][i].setRed(0);
+        pixelData[0][i].setGreen(0);
+        pixelData[0][i].setBlue(0);
     }
     return;
 }

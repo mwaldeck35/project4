@@ -168,15 +168,14 @@ void loadFile(Graphics& drawer)
             
         }
         else if (shape == 'C'){
-            /*
+        
             Circle current;
             current.read(inputFile);
             current.draw(drawer);
-             */
+             
             
-            //make sure to remove code below
-            string remainingLine;
-            getline(inputFile, remainingLine);
+            
+            
         }
         else {
             string remainingLine;
