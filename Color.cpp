@@ -12,11 +12,10 @@
 
 #include "Color.h"
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 9d8c970b77e528d284b39d77aae13bf52c9d54e0
+
+
 Color::Color(){
     red = 0;
     green = 0;
@@ -90,10 +89,8 @@ int Color::checkRange(int val){
 }
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 9d8c970b77e528d284b39d77aae13bf52c9d54e0
+
 istream& operator >> (istream& ins, Color& color)
 {
    color.read(ins);

@@ -21,11 +21,6 @@
 
 using namespace std;
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 9d8c970b77e528d284b39d77aae13bf52c9d54e0
 Graphics::Graphics(){
     initArray();
 }
