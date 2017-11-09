@@ -62,9 +62,9 @@ void Color::read(istream& ins){
     ins >> green;
     ins >> blue;
     
-    checkRange(red);
-    checkRange(green);
-    checkRange(blue);
+    red = checkRange(red);
+    green = checkRange(green);
+    blue = checkRange(blue);
 }
 
 void Color::write(ostream& outs){
