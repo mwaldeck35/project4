@@ -17,10 +17,6 @@
 #include <algorithm>
 using namespace std;
 
-// TODO: implement three constructors, setStart, getStart, setEnd, getEnd,
-//       setColor, setColorTopLeft, getColorTopLeft, setColorTopRight,
-//       getColorTopRight, setColorBottomRight, getColorBottomRight,
-//       setColorBottomLeft, getColorBottomLeft, read, write.
 
 
 Rectangle::Rectangle(){
@@ -179,13 +175,9 @@ void Rectangle::read(istream& ins){
     start.read(ins);
     end.read(ins);
     colorTopLeft.read(ins);
-    
-    
-    
-    
     colorTopRight.read(ins);
-    colorBottomLeft.read(ins);
     colorBottomRight.read(ins);
+    colorBottomLeft.read(ins);
     
     
     
@@ -208,6 +200,7 @@ void Rectangle::read(istream& ins){
 }
 
 void Rectangle::write(ostream& outs){
+    
     start.write(outs);
     end.write(outs);
     colorTopLeft.write(outs);
@@ -220,8 +213,7 @@ void Rectangle::write(ostream& outs){
 
 
 
-// Your code goes above this line.
-// Don't change the implementations below!
+
 
 istream& operator >> (istream& ins, Rectangle& rectangle)
 {
