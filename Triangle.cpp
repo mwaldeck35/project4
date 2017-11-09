@@ -149,12 +149,22 @@ Color Triangle::getVertexThreeColor(){
 void Triangle::read(istream& ins){
     vertexOne.read(ins);
     vertexTwo.read(ins);
-    vertexThree.read(ins);
+    if (ins.fail()){
+        ins.clear();
+        vertexOneColor.read(ins);
+        vertexTwo.read(ins);
+        vertexTwoColor.read(ins);
+        vertexThree.read(ins);
+        vertexThreeColor.read(ins);
+        return;
+    }
     
+    vertexThree.read(ins);
     vertexOneColor.read(ins);
     
     vertexTwoColor.read(ins);
     vertexThreeColor.read(ins);
+    
     return;
     
 }
