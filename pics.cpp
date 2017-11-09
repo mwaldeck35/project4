@@ -129,8 +129,7 @@ int main()
 
 void writeFile(const Graphics& drawer)
 {
-    // TODO: implement
-    // This will make use of Graphics::writeFile()
+
     string fileName;
     cin >> fileName;
     fileName += ".bmp";
@@ -191,7 +190,7 @@ void loadFile(Graphics& drawer)
     inputFile.close();
     cout << "[Loaded " << fileName << "]" << endl;
     
-    // TODO: implement
+    
 }
 
 string tolower(string str)

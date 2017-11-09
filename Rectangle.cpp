@@ -212,9 +212,6 @@ void Rectangle::write(ostream& outs){
 }
 
 
-
-
-
 istream& operator >> (istream& ins, Rectangle& rectangle)
 {
     rectangle.read(ins);

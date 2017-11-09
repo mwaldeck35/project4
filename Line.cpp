@@ -13,8 +13,6 @@
 #include "Line.h"
 #include "Graphics.h"
 
-// TODO: implement two Line constructors, setStart, getStart, setEnd,
-//       getEnd, setColor, getColor, read, write.
 
 Line::Line(){
     
@@ -89,9 +87,6 @@ void Line::write(ostream& outs){
 
 
 
-
-// Your code goes above this line.
-// Don't change the implementations below!
 
 istream& operator >> (istream& ins, Line& line)
 {

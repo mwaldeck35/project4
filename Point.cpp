@@ -16,7 +16,7 @@
 // for the declaration of DIMENSION
 #include "utility.h"
 
-// TODO: implement two constructors, setX, getX, setY, getY, read, write, checkRange.
+
 Point::Point() {
     x = 0;
     y = 0;
@@ -86,12 +86,7 @@ int Point::checkRange(int val) {
         return DIMENSION - 1;
     }
     return val;
-    
-    
 }
-
-
-
 
 istream& operator >> (istream& ins,  Point& pt)
 {

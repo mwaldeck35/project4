@@ -21,7 +21,7 @@
 
 using namespace std;
 
-// TODO: implement constructor, clear, setPixel, initArray.
+
 
 Graphics::Graphics(){
     initArray();
@@ -52,8 +52,6 @@ void Graphics::initArray(){
     return;
 }
 
-// Your code goes above this line.
-// Don't change the implementation below!
 
 void Graphics::writeFile(string fileName) const
 {

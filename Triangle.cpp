@@ -16,11 +16,6 @@
 #include <cmath>
 using namespace std;
 
-// TODO: implement three constructors, setColor, setVertexOne, getVertexOne,
-//       setVertexTwo, getVertexTwo, setVertexThree, getVertexThree,
-//       setVertexOneColor, getVertexOneColor, setVertexTwoColor,
-//       getVertexTwoColor, setVertexThreeColor, getVertexThreeColor,
-//       read, write.
 
 Triangle::Triangle(){
     
@@ -193,8 +188,6 @@ void Triangle::write(ostream& outs){
 }
 
 
-// Your code goes above this line.
-// Don't change the implementations below!
 
 istream& operator >> (istream& ins, Triangle& tri)
 {
