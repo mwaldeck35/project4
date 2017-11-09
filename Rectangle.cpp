@@ -83,6 +83,7 @@ Rectangle::Rectangle(Point pt1, Point pt2, Color cTopLeft, Color cTopRight, Colo
 void Rectangle::setStart(Point pt){
     start.setX(pt.getX());
     start.setY(pt.getY());
+    return;
 }
 
 Point Rectangle::getStart(){
@@ -92,6 +93,7 @@ Point Rectangle::getStart(){
 void Rectangle::setEnd(Point pt){
     end.setX(pt.getX());
     end.setY(pt.getY());
+    return;
 }
 
 Point Rectangle::getEnd(){
@@ -117,6 +119,8 @@ void Rectangle::setColor(Color color){
     colorBottomRight.setGreen(color.getGreen());
     colorBottomRight.setBlue(color.getBlue());
     
+    return;
+    
 }
 
 void Rectangle::setColorTopLeft(Color color){
@@ -124,7 +128,7 @@ void Rectangle::setColorTopLeft(Color color){
     colorTopLeft.setRed(color.getRed());
     colorTopLeft.setGreen(color.getGreen());
     colorTopLeft.setBlue(color.getBlue());
-    
+    return;
 }
 
 Color Rectangle::getColorTopLeft(){
@@ -137,7 +141,7 @@ void Rectangle::setColorTopRight(Color color){
     colorTopRight.setGreen(color.getGreen());
     colorTopRight.setBlue(color.getBlue());
     
-    
+    return;
 }
 
 Color Rectangle::getColorTopRight(){
@@ -147,9 +151,9 @@ Color Rectangle::getColorTopRight(){
 void Rectangle::setColorBottomRight(Color color){
     
     
-    colorBottomLeft.setRed(color.getRed());
-    colorBottomLeft.setGreen(color.getGreen());
-    colorBottomLeft.setBlue(color.getBlue());
+    colorBottomRight.setRed(color.getRed());
+    colorBottomRight.setGreen(color.getGreen());
+    colorBottomRight.setBlue(color.getBlue());
     
     return;
 }
@@ -158,9 +162,9 @@ Color Rectangle::getColorBottomRight(){
 }
 void Rectangle::setColorBottomLeft(Color color){
     
-    colorBottomRight.setRed(color.getRed());
-    colorBottomRight.setGreen(color.getGreen());
-    colorBottomRight.setBlue(color.getBlue());
+    colorBottomLeft.setRed(color.getRed());
+    colorBottomLeft.setGreen(color.getGreen());
+    colorBottomLeft.setBlue(color.getBlue());
     
     return;
 }
@@ -187,6 +191,7 @@ void Rectangle::read(istream& ins){
     
     if(ins.fail()){
         ins.clear();
+        
         colorTopRight.setRed(colorTopLeft.getRed());
         colorTopRight.setBlue(colorTopLeft.getBlue());
         colorTopRight.setGreen(colorTopLeft.getGreen());
