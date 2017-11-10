@@ -103,12 +103,12 @@ void test_line(){
     Color col(900,900,900);
     Line line2(pt,pt, col);
     line.setStart(pt);
-    line.getStart();
+    cout << line.getStart() << endl;
     line.setEnd(pt);
-    line.getEnd();
+    cout << line.getEnd() << endl;
     Color color;
     line.setColor(color);
-    line.getColor();
+    cout << line.getColor() << endl;
     
 }
 void test_rectangle(){
@@ -118,18 +118,18 @@ void test_rectangle(){
     Rectangle rect2(pt1,pt1,col);
     Rectangle rect3(pt1,pt1,col,col,col,col);
     rect.setStart(pt1);
-    rect.getStart();
+    cout << rect.getStart() << endl;
     rect.setEnd(pt1);
-    rect.getEnd();
+    cout << rect.getEnd() << endl;
     rect2.setColor(col);
     rect2.setColorTopLeft(col);
     rect2.setColorTopRight(col);
     rect2.setColorBottomLeft(col);
     rect2.setColorBottomRight(col);
-    rect2.getColorTopLeft();
-    rect2.getColorTopRight();
-    rect2.getColorBottomLeft();
-    rect2.getColorBottomRight();
+    cout << rect2.getColorTopLeft() << endl;
+    cout << rect2.getColorTopRight() << endl;
+    cout << rect2.getColorBottomLeft() << endl;
+    cout << rect2.getColorBottomRight() << endl;
     
 }
 void test_point(){
