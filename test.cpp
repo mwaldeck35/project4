@@ -93,9 +93,9 @@ void test_triangle(){
     tri1.setVertexTwo(pt1);
     cout << tri1.getVertexTwo() << endl;
     tri1.setVertexThree(pt1);
-    tri1.getVertexThree();
-    tri1.getVertexTwoColor();
-    tri1.getVertexThreeColor();
+    cout << tri1.getVertexThree() << endl;
+    cout << tri1.getVertexTwoColor() << endl;
+    cout << tri1.getVertexThreeColor() << endl;
 }
 void test_line(){
     Line line;
@@ -137,9 +137,8 @@ void test_point(){
     Point pt(100, -1);
     pt.setX(101);
     pt.setY(-2);
-    pt.getX();
-    pt.getY();
-    
+    cout << pt.getX() << endl;
+    cout << pt.getY() << endl;
 }
 void test_rw(){
     Point pt(1,2);
