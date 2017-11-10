@@ -67,17 +67,21 @@ void test_color(){
 
 void test_circle(){
     Circle circ1;
-    Point pt1;
+    cout << circ1.getCenter() << endl;
+    cout << circ1.getRadius() << endl;
+    Point pt1(20,30);
     Color color1(100,100,100);
     Circle circ2(pt1, -100, color1);
+    cout << circ2.getCenter() << endl;
+    cout << circ2.getRadius() << endl;
     Circle circ3(pt1,2,color1);
     circ1.setCenter(pt1);
     cout << circ1.getCenter() << endl;
-    circ1.setRadius(1);
+    circ1.setRadius(2);
     cout << circ1.getRadius() << endl;
     circ1.setColor(color1);
     cout << circ1.getColor() << endl;
-    //hmmmjl;
+    
 }
 void test_triangle(){
     Triangle tri1;
@@ -115,17 +119,35 @@ void test_rectangle(){
     Rectangle rect;
     Point pt1;
     Color col(900,900,900);
+    Color col2(30,30,30);
+    Color col3(15,15,15)
     Rectangle rect2(pt1,pt1,col);
+    cout << rect2.getStart() << endl;
+    cout << rect2.getEnd() << endl;
+    cout << rect2.getColorTopLeft() << endl;
+    cout << rect2.getColorTopRight() << endl;
+    cout << rect2.getColorBottomRight() << endl;
+    cout << rect2.getColorBottomLeft() << endl;
     Rectangle rect3(pt1,pt1,col,col,col,col);
+    cout << rect3.getStart() << endl;
+    cout << rect3.getEnd() << endl;
+    cout << rect3.getColorTopLeft() << endl;
+    cout << rect3.getColorTopRight() << endl;
+    cout << rect3.getColorBottomRight() << endl;
+    cout << rect3.getColorBottomLeft() << endl;
     rect.setStart(pt1);
     cout << rect.getStart() << endl;
     rect.setEnd(pt1);
     cout << rect.getEnd() << endl;
-    rect2.setColor(col);
-    rect2.setColorTopLeft(col);
-    rect2.setColorTopRight(col);
-    rect2.setColorBottomLeft(col);
-    rect2.setColorBottomRight(col);
+    rect2.setColor(col2);
+    cout << rect2.getColorTopLeft() << endl;
+    cout << rect2.getColorTopRight() << endl;
+    cout << rect2.getColorBottomLeft() << endl;
+    cout << rect2.getColorBottomRight() << endl;
+    rect2.setColorTopLeft(col3);
+    rect2.setColorTopRight(col3);
+    rect2.setColorBottomLeft(col3);
+    rect2.setColorBottomRight(col3);
     cout << rect2.getColorTopLeft() << endl;
     cout << rect2.getColorTopRight() << endl;
     cout << rect2.getColorBottomLeft() << endl;
