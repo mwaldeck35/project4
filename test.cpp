@@ -137,15 +137,20 @@ void test_point(){
     Point pt(100, -1);
     pt.setX(101);
     pt.setY(-2);
+    pt.setX(50);
+    pt.setY(25);
     cout << pt.getX() << endl;
     cout << pt.getY() << endl;
 }
 void test_rw(){
     Point pt(1,2);
-    Line line;
-    Rectangle rect;
-    Triangle tri;
-    Circle circ;
+    Point pt2(3,4);
+    Point pt3(4,5);
+    Color col(30,30,30);
+    Line line(pt, pt2, col);
+    Rectangle rect(pt, pt3, col);
+    Triangle tri(pt,pt2,pt3, col);
+    Circle circ(pt3,20, col);
     
     ofstream file1;
     file1.open("data2.txt");
@@ -168,6 +173,17 @@ void test_rw(){
     circ.read(file2);
     
     file2.close();
+    
+    cout << pt.getX() << endl;
+    cout << pt.getY() << endl;
+    cout << rect.getStart() << endl;
+    cout << rect.getEnd() << endl;
+    cout << tri.getVertexOne() << endl;
+    cout << tri.getVertexTwo() << endl;
+    cout << tri.getVertexThree() << endl;
+    cout << circ.getCenter() << endl;
+    cout << circ.getRadius() << endl;
+    
     
     
     
