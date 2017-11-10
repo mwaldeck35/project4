@@ -120,8 +120,7 @@ void test_rectangle(){
     Point pt1;
     Color col(900,900,900);
     Color col2(30,30,30);
-    Color col3(15,15,15)
-    Rectangle rect2(pt1,pt1,col);
+    Color col3(15,15,15);    Rectangle rect2(pt1,pt1,col);
     cout << rect2.getStart() << endl;
     cout << rect2.getEnd() << endl;
     cout << rect2.getColorTopLeft() << endl;
