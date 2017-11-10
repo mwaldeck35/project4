@@ -40,6 +40,11 @@ int main(void){
 }
 
 void test_graphics(){
+    /*
+     *creates san instance of graphics and tests member function calls
+     *these will be monitored via the system debugger
+     */
+    
     Graphics draw1;
     Color color1(999,-100,2);
     draw1.setPixel(99,0, color1);
@@ -47,24 +52,34 @@ void test_graphics(){
 }
 
 void test_color(){
+    //creates several instances of color and prints member function calls
     Color color;
     cout << color.getGreen() << endl;
     cout << color.getRed() << endl;
     cout << color.getBlue() << endl;
     Color color2(50,50,-100);
-    cout << color.getGreen() << endl;
-    cout << color.getBlue() << endl;
-    cout << color.getRed() << endl;
+    cout << color2.getGreen() << endl;
+    cout << color2.getBlue() << endl;
+    cout << color2.getRed() << endl;
     color.setRed(100);
     color.setGreen(900);
     color.setBlue(-100);
     cout << color.getRed() << endl;
     cout << color.getGreen() << endl;
     cout << color.getBlue() << endl;
-    
+    color.setRed(-1);
     color.setBlue(10000);
     cout << color.getBlue() << endl;
     
+    Color color4(-100,-1,-2);
+    cout << color4.getGreen() << endl;
+    cout << color4.getBlue() << endl;
+    cout << color4.getRed() << endl;
+    
+    Color color5(300,400,600);
+    cout << color5.getGreen() << endl;
+    cout << color5.getBlue() << endl;
+    cout << color5.getRed() << endl;
     ofstream file;
     ifstream file2;
     file2.open("data1.txt");
@@ -75,6 +90,7 @@ void test_color(){
 }
 
 void test_circle(){
+    //creates several instances of circle and prints member function calls
     Circle circ1;
     cout << circ1.getCenter() << endl;
     cout << circ1.getRadius() << endl;
@@ -102,6 +118,7 @@ void test_circle(){
     
 }
 void test_triangle(){
+    //creates several instances of triangle and prints member function calls
     Triangle tri1;
     cout << tri1.getVertexOne() << endl;
     cout << tri1.getVertexTwo() << endl;
@@ -119,7 +136,6 @@ void test_triangle(){
     tri2.setVertexThree(pt2);
     cout << tri2.getVertexThree().getX() << endl;
     cout << tri2.getVertexThree().getY() << endl;
-    
     cout << tri2.getVertexOne() << endl;
     cout << tri2.getVertexTwo() << endl;
     cout << tri2.getVertexThree().getX() << endl;
@@ -146,11 +162,11 @@ void test_triangle(){
     cout << tri1.getVertexThreeColor() << endl;
 }
 void test_line(){
+    //creates several instances of line and prints member function calls
     Line line;
     cout << line.getStart() << endl;
     cout << line.getEnd() << endl;
     cout << line.getColor() << endl;
-
     Point pt;
     Point pt2(2,2);
     Point pt3(5,5);
@@ -169,6 +185,7 @@ void test_line(){
     
 }
 void test_rectangle(){
+    //creates several instances of rectangle and prints member function calls
     Rectangle rect;
     Point pt1;
     Point pt2(50,50);
@@ -220,6 +237,7 @@ void test_rectangle(){
     
 }
 void test_point(){
+    //creates several instances of point and prints member function calls
     Point pt1;
     Point pt(100, -1);
     pt.setX(101);
@@ -230,6 +248,11 @@ void test_point(){
     cout << pt.getY() << endl;
 }
 void test_rw(){
+    /*creates several instances of point, triangle, color, line, rectangle
+     * and circle.
+     * it then writes and reads to mentioned textfiles to test write and read
+     * member functions of each class
+     */
     Point pt(1,2);
     Point pt2(3,4);
     Point pt3(4,5);
@@ -238,40 +261,35 @@ void test_rw(){
     Rectangle rect(pt, pt3, col);
     Triangle tri(pt,pt2,pt3, col);
     Circle circ(pt3,20, col);
-    
     ofstream file1;
     file1.open("data2.txt");
-    
     pt.write(file1);
     line.write(file1);
     rect.write(file1);
     tri.write(file1);
     circ.write(file1);
-    
     file1.close();
-    
     ifstream file2;
     file2.open("data2.txt");
-    
     pt.read(file2);
     line.read(file2);
     rect.read(file2);
     tri.read(file2);
     circ.read(file2);
-    
     file2.close();
-    
     cout << pt.getX() << endl;
     cout << pt.getY() << endl;
     cout << rect.getStart() << endl;
     cout << rect.getEnd() << endl;
-    cout << tri.getVertexOne() << endl;
-    cout << tri.getVertexTwo() << endl;
-    cout << tri.getVertexThree() << endl;
+    cout << tri.getVertexOne().getX() << endl;
+    cout << tri.getVertexOne().getY() << endl;
+    cout << tri.getVertexTwo().getY() << endl;
+    cout << tri.getVertexTwo().getX() << endl;
+    cout << tri.getVertexThree().getX() << endl;
+    cout << tri.getVertexThree().getY() << endl;
+    cout << tri.getVertexThreeColor().getBlue() << endl;
+    cout << tri.getVertexThreeColor().getGreen() << endl;
+    cout << tri.getVertexThreeColor().getRed() << endl;
     cout << circ.getCenter() << endl;
     cout << circ.getRadius() << endl;
-    
-    
-    
-    
 }
