@@ -48,7 +48,13 @@ void test_graphics(){
 
 void test_color(){
     Color color;
+    cout << color.getGreen() << endl;
+    cout << color.getRed() << endl;
+    cout << color.getBlue() << endl;
     Color color2(50,50,-100);
+    cout << color.getGreen() << endl;
+    cout << color.getBlue() << endl;
+    cout << color.getRed() << endl;
     color.setRed(100);
     color.setGreen(900);
     color.setBlue(-100);
@@ -69,11 +75,15 @@ void test_circle(){
     Circle circ1;
     cout << circ1.getCenter() << endl;
     cout << circ1.getRadius() << endl;
+    cout << circ1.getColor().getGreen() << endl;
+    cout << circ1.getColor().getRed() << endl;
+    cout << circ1.getColor().getBlue() << endl;
     Point pt1(20,30);
     Color color1(100,100,100);
     Circle circ2(pt1, -100, color1);
     cout << circ2.getCenter() << endl;
     cout << circ2.getRadius() << endl;
+    cout << circ2.getColor() << endl;
     Circle circ3(pt1,2,color1);
     circ1.setCenter(pt1);
     cout << circ1.getCenter() << endl;
@@ -85,12 +95,33 @@ void test_circle(){
 }
 void test_triangle(){
     Triangle tri1;
+    cout << tri1.getVertexOne() << endl;
+    cout << tri1.getVertexTwo() << endl;
+    cout << tri1.getVertexThree() << endl;
+    cout <<  tri1.getVertexOneColor() << endl;
+    cout << tri1.getVertexTwoColor() << endl;
+    cout << tri1.getVertexThreeColor().getGreen() << endl;
+    cout << tri1.getVertexThreeColor().getBlue() << endl;
+    cout << tri1.getVertexThreeColor().getRed() << endl;
     Point pt1;
     Color color(900,900,900);
     Color color2(100,100,100);
     Triangle tri2(pt1, pt1, pt1, color);
+    cout << tri2.getVertexOne() << endl;
+    cout << tri2.getVertexTwo() << endl;
+    cout << tri2.getVertexThree().getX() << endl;
+    cout << tri2.getVertexThree().getY() << endl;
+    cout <<  tri2.getVertexOneColor() << endl;
+    cout << tri2.getVertexTwoColor() << endl;
+    cout << tri2.getVertexThreeColor() << endl;
     Triangle tri3(pt1,color,pt1,color,pt1,color2);
-    tri1.setColor(color);
+    cout << tri3.getVertexOne() << endl;
+    cout << tri3.getVertexTwo() << endl;
+    cout << tri3.getVertexThree() << endl;
+    cout <<  tri3.getVertexOneColor() << endl;
+    cout << tri3.getVertexTwoColor() << endl;
+    cout << tri3.getVertexThreeColor() << endl;
+    tri1.setColor(color2);
     cout << tri1.getVertexOneColor() << endl;
     tri1.setVertexOne(pt1);
     cout << tri1.getVertexOne() << endl;
@@ -103,14 +134,23 @@ void test_triangle(){
 }
 void test_line(){
     Line line;
-    Point pt;
-    Color col(900,900,900);
-    Line line2(pt,pt, col);
-    line.setStart(pt);
     cout << line.getStart() << endl;
-    line.setEnd(pt);
     cout << line.getEnd() << endl;
-    Color color;
+    cout << line.getColor() << endl;
+
+    Point pt;
+    Point pt2(2,2);
+    Point pt3(5,5);
+    Color col(900,900,900);
+    Line line2(pt,pt2, col);
+    cout << line2.getStart() << endl;
+    cout << line2.getEnd() << endl;
+    cout << line2.getColor() << endl;
+    line.setStart(pt2);
+    cout << line.getStart() << endl;
+    line.setEnd(pt3);
+    cout << line.getEnd() << endl;
+    Color color(100,44,100);
     line.setColor(color);
     cout << line.getColor() << endl;
     
@@ -124,10 +164,18 @@ void test_rectangle(){
     Rectangle rect2(pt1,pt1,col);
     cout << rect2.getStart() << endl;
     cout << rect2.getEnd() << endl;
-    cout << rect2.getColorTopLeft() << endl;
-    cout << rect2.getColorTopRight() << endl;
-    cout << rect2.getColorBottomRight() << endl;
-    cout << rect2.getColorBottomLeft() << endl;
+    cout << rect2.getColorTopLeft().getGreen() << endl;
+    cout << rect2.getColorTopLeft().getBlue() << endl;
+    cout << rect2.getColorTopLeft().getRed() << endl;
+    cout << rect2.getColorTopRight().getGreen() << endl;
+    cout << rect2.getColorTopRight().getRed() << endl;
+    cout << rect2.getColorTopRight().getBlue() << endl;
+    cout << rect2.getColorBottomRight().getGreen() << endl;
+    cout << rect2.getColorBottomRight().getBlue() << endl;
+    cout << rect2.getColorBottomRight().getRed() << endl;
+    cout << rect2.getColorBottomLeft().getGreen() << endl;
+    cout << rect2.getColorBottomLeft().getBlue() << endl;
+    cout << rect2.getColorBottomLeft().getRed() << endl;
     Rectangle rect3(pt1,pt1,col,col,col,col);
     cout << rect3.getStart() << endl;
     cout << rect3.getEnd() << endl;
