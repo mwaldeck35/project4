@@ -62,6 +62,9 @@ void test_color(){
     cout << color.getGreen() << endl;
     cout << color.getBlue() << endl;
     
+    color.setBlue(10000);
+    cout << color.getBlue() << endl;
+    
     ofstream file;
     ifstream file2;
     file2.open("data1.txt");
@@ -88,6 +91,11 @@ void test_circle(){
     circ1.setCenter(pt1);
     cout << circ1.getCenter() << endl;
     circ1.setRadius(2);
+    if(circ1.getRadius() == 2){
+        cout << "circ1 radius setter works" << endl;
+    }
+    cout << circ1.getRadius() << endl;
+    circ1.setRadius(-1);
     cout << circ1.getRadius() << endl;
     circ1.setColor(color1);
     cout << circ1.getColor() << endl;
@@ -107,6 +115,11 @@ void test_triangle(){
     Color color(900,900,900);
     Color color2(100,100,100);
     Triangle tri2(pt1, pt1, pt1, color);
+    Point pt2(20,20);
+    tri2.setVertexThree(pt2);
+    cout << tri2.getVertexThree().getX() << endl;
+    cout << tri2.getVertexThree().getY() << endl;
+    
     cout << tri2.getVertexOne() << endl;
     cout << tri2.getVertexTwo() << endl;
     cout << tri2.getVertexThree().getX() << endl;
@@ -158,11 +171,14 @@ void test_line(){
 void test_rectangle(){
     Rectangle rect;
     Point pt1;
+    Point pt2(50,50);
+    Point pt3(25,25);
     Color col(900,900,900);
     Color col2(30,30,30);
     Color col3(15,15,15);
-    Rectangle rect2(pt1,pt1,col);
-    cout << rect2.getStart() << endl;
+    Rectangle rect2(pt1,pt2,col);
+    cout << rect2.getStart().getY() << endl;
+    cout << rect2.getStart().getX() << endl;
     cout << rect2.getEnd() << endl;
     cout << rect2.getColorTopLeft().getGreen() << endl;
     cout << rect2.getColorTopLeft().getBlue() << endl;
@@ -176,16 +192,17 @@ void test_rectangle(){
     cout << rect2.getColorBottomLeft().getGreen() << endl;
     cout << rect2.getColorBottomLeft().getBlue() << endl;
     cout << rect2.getColorBottomLeft().getRed() << endl;
-    Rectangle rect3(pt1,pt1,col,col,col,col);
+    Rectangle rect3(pt2,pt3,col3,col,col2,col);
     cout << rect3.getStart() << endl;
     cout << rect3.getEnd() << endl;
     cout << rect3.getColorTopLeft() << endl;
     cout << rect3.getColorTopRight() << endl;
     cout << rect3.getColorBottomRight() << endl;
     cout << rect3.getColorBottomLeft() << endl;
-    rect.setStart(pt1);
-    cout << rect.getStart() << endl;
-    rect.setEnd(pt1);
+    rect.setStart(pt3);
+    cout << rect.getStart().getY() << endl;
+    cout << rect.getStart().getX() << endl;
+    rect.setEnd(pt2);
     cout << rect.getEnd() << endl;
     rect2.setColor(col2);
     cout << rect2.getColorTopLeft() << endl;
